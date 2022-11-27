@@ -66,6 +66,7 @@
   }
 
   .page__inner_intro {
+    padding: 0 1wp;
     padding-top: 29px;
   }
 
@@ -82,11 +83,21 @@
   }
 
   .page__inner_section {
-    padding: 102px 0 110px;
+    padding: 0 1wp;
+    padding-top: 102px;
+    padding-bottom: 110px;
   }
 
   .page__header {
     margin: 0 auto;
+  }
+
+  .page__inner_subscride {
+    padding: 0 1vw;
+  }
+
+  .page__inner_footer {
+    padding: 0 1vw;
   }
 
     /* Header */
@@ -261,7 +272,9 @@
     display: flex;
     max-width: 1249px;
     margin: 0 auto;
-    padding: 107px 0 90px;
+    padding: 0 1vw;
+    padding-top: 107px;
+    padding-bottom: 90px;
     border-bottom: 2px solid #ececec;
     justify-content: space-between;
   }
@@ -362,7 +375,9 @@
   .feature {
     max-width: 1249px;
     margin: 0 auto;
-    padding: 105px 0 65px;
+    padding: 0 1vw;
+    padding-top: 105px;
+    padding-bottom: 65px;
   }
 
   .feature__header {
@@ -447,6 +462,7 @@
   .feature__product {
     width: 297px;
     object-fit: cover;
+    flex: 1 1 auto;
   }
 
   .feature__img1 {
@@ -457,7 +473,10 @@
   .team {
     max-width: 1249px;
     margin: 0 auto;
-    padding: 65px 0 53px;
+    padding: 0 1vw;
+    padding-top: 65px;
+    padding-bottom: 53px;
+    text-align: left;
   }
 
   /* .team__header { */
@@ -487,6 +506,8 @@
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(2, auto);
     justify-content: space-between;
+    align-items: end;
+    column-gap: 2vw;
   }
 
   .team__lead-photo {
@@ -509,7 +530,7 @@
     }
   } 
 
-  @supports (grid-template-columns) and (grid-template-rows) {
+  @supports (grid-template-columns: subgrid) {
     .team__inner {
       display: grid;
       grid-template-columns: subgrid;
@@ -521,7 +542,7 @@
   }
 
   .team__lead-main {
-    width: 631px;
+    max-width: 631px;
     margin-left: 77px;
     grid-column: 2 / 3;
     grid-row: 1 / 2;
@@ -570,7 +591,7 @@
 
   .team__others {
     display: flex;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     gap: 20px;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
@@ -606,6 +627,26 @@
 
  .team__other:hover > .team__other-name {
   display: block;
+}
+
+@media screen and (max-width: 800px) {
+  .team__members {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    row-gap: 1em;
+  }
+  .team__lead-photo {
+    grid-row: auto;
+  }
+  .team__lead-main {
+    grid-column: 1 / 2;
+    grid-row: auto;
+  }
+  .team__others {
+    grid-column: 1 / 2;
+    grid-row: auto;
+  }
 }
 
 /* subscribe */
@@ -671,14 +712,21 @@
 
 /* Feedback */
 .feedback {
-  max-width: 1249px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 104px 0 107px;
+  padding: 0 1vw;
+  padding-top: 104px;
+  padding-bottom: 107px;
 }
 
 .feedback__header {
-  max-width: 752px;
+  max-width: 1249px;
+  margin: 0 auto;
   margin-bottom: 77px;
+}
+
+.feedback__inner {
+  max-width: 752px;
 }
 
 .feedback__heading {
@@ -700,15 +748,26 @@
 
 .feedback__body {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 731px 107px 411px  1fr;
+  grid-template-rows: auto;
+}
+
+.feedback__body::after {
+  content: '';
+  background-color: #2d2d2d;
+  grid-column: 5 / 6;
 }
 
 .feedback__form {
   width: 731px;
   display: flex;
   flex-wrap: wrap;
+  grid-column: 2 / 3;
   justify-content: space-between;
+  margin-right: 107px;
 }
 
 .feedback__form > input::placeholder,
@@ -778,6 +837,7 @@
 .feedback__contacts {
   color: #ffffff;
   background-color: rgba(45, 45, 45, 1);
+  grid-column: 4 / 5;
   }
 
  .contacts {
@@ -815,6 +875,40 @@
   color: #ffffff;
   font-family: 'Open Sans';
   margin: 0;
+}
+
+@media screen and (max-width: 1248px) {
+  .feedback__body {
+    grid-template-columns: 1fr auto 1fr;
+    row-gap: 107px;
+  }
+  .feedback__body::after {
+    content: none;
+  }
+  .feedback__form {
+    width: 100%;
+    grid-column: 2 /3;
+    margin-right: initial;
+  }
+  .feedback__name {
+    width: 100%;
+    margin-right: initial;
+  }
+  .feedback__email {
+    width: 100%;
+  }
+  .feedback__textarea {
+    width: 100%;
+  }
+  .feedback__button {
+    width: inherit;
+  }
+  .feedback__contacts {
+    grid-column: 2 / 3;
+  }
+  .contacts {
+    width: auto;
+  }
 }
 
 /* Footer */
