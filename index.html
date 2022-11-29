@@ -9,16 +9,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/popup-menu.js"></script>
 </head>
 <body class="page">
     <div class="header__inner page__inner_intro page__inner_grey">
         <header class="header page__header">
             <nav class="site-menu">
                 <ul class="site-menu__list">
-                    <li class="site-menu__item"><a class="site-menu__link site-menu__link_active" href="#">Home</a></li>
-                    <li class="site-menu__item"><a class="site-menu__link" href="#feature">Portfolio</a></li>
-                    <li class="site-menu__item"><a class="site-menu__link" href="#team">About us</a></li>
-                    <li class="site-menu__item"><a class="site-menu__link" href="">Contact</a></li>
+                    <li class="site-menu__item site-menu__item_home"><a class="site-menu__link site-menu__link_active" href="#">Home</a></li>
+                    <li class="site-menu__item site-menu__item_port"><a class="site-menu__link" href="#feature">Portfolio</a></li>
+                    <li class="site-menu__item site-menu__item_about"><a class="site-menu__link" href="#team">About us</a></li>
+                    <li class="site-menu__item site-menu__item_cont"><a class="site-menu__link" href="">Contact</a></li>
+                </ul>
+            </nav>
+            <nav class="popup-menu">
+                <button class="popup-menu__button" ></button>
+                <ul class="popup-menu__list hide">
+                    <li class="popup-menu__item popup-menu__item_home"><a class="popup-menu__link popup-menu__link_active" href="#">Home</a></li>
+                    <li class="popup-menu__item popup-menu__item_port"><a class="popup-menu__link" href="#feature">Portfolio</a></li>
+                    <li class="popup-menu__item popup-menu__item_about"><a class="popup-menu__link" href="#team">About us</a></li>
+                    <li class="popup-menu__item popup-menu__item_cont"><a class="popup-menu__link" href="">Contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -28,7 +38,7 @@
             <section class="intro">
                 <div class="intro__info">
                     <h2 class="intro__heading">Our strong<br> <span class="intro__span intro__span_special"> organization</span></h2>
-                    <p class="intro__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad ex optio aperiam sunt nulla assumenda eaque numquam, cumque tempora dicta voluptatibus? Accusantium culpa earum vel amet fugiat, ipsa quis voluptatem.</p>
+                    <p class="intro__text">Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt  ut labore et. ectetur adig ipis cing elit, sed do eiusmod tempor incididunt.</p>
                     <a class="action-link action-link_red-full" href="">Contact Us</a>
                 </div>
                 <video class="intro__video" preload="auto" muted autoplay loop poster="img/intro-video.jpg">
@@ -41,8 +51,8 @@
         </div>
     <section class="services">
         <div class="services__info">
-            <h2 class="services__heading">Do you know we can provide for you?</h2>
-            <p class="services__about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quam dolorem, enim qui iure fugit incidunt non id odio, vero, blanditiis expedita inventore facilis. Deleniti nulla voluptatem repellat eum suscipit!</p>
+            <h2 class="services__heading">Do you know we can provide for you ?</h2>
+            <p class="services__about">Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt   ut labore et.Lorem ni ipsum dolor sit amet, consectetur adipis cing elit, ed doi eiusmod tempor incididunt ut labore et.</p>
             <a class="action-link action-link_red-transp" href="">Learm More</a>
         </div>
         <div class="services__items">
@@ -98,14 +108,14 @@
             </ul>
         </div>
         <div class="feature__products">
-            <img class="feature__product feature__img1" width="300" height="293" src="img/1.jpg" alt="верстка приложения">
-            <img class="feature__product" width="300" height="293" src="img/2.jpg" alt="верстка приложения">
-            <img class="feature__product" width="300" height="293" src="img/3.jpg" alt="верстка приложения">
-            <img class="feature__product" width="300" height="293" src="img/4.jpg" alt="верстка приложения">
-            <img class="feature__product" width="300" height="293" src="img/5.jpg" alt="верстка приложения">
-            <img class="feature__product" width="300" height="293" src="img/6.jpg" alt="верстка приложения">
-            <img class="feature__product" width="300" height="293" src="img/7.jpg" alt="верстка приложения">
-            <img class="feature__product" width="300" height="293" src="img/8.jpg" alt="верстка приложения">
+            <img class="feature__product feature__img1" width="301" height="293" src="img/1.jpg" alt="верстка приложения">
+            <img class="feature__product" width="301" height="293" src="img/2.jpg" alt="верстка приложения">
+            <img class="feature__product" width="301" height="293" src="img/3.jpg" alt="верстка приложения">
+            <img class="feature__product" width="301" height="293" src="img/4.jpg" alt="верстка приложения">
+            <img class="feature__product" width="301" height="293" src="img/5.jpg" alt="верстка приложения">
+            <img class="feature__product" width="301" height="293" src="img/6.jpg" alt="верстка приложения">
+            <img class="feature__product" width="301" height="293" src="img/7.jpg" alt="верстка приложения">
+            <img class="feature__product" width="301" height="293" src="img/8.jpg" alt="верстка приложения">
         </div>
     </section>
     <section class="team">
